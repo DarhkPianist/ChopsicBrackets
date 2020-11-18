@@ -1,10 +1,10 @@
 {
-    "name": "sashadarhk.chopsicbrackets",
-    "title": "ChopsicBrackets",
-    "description": "A theme for Brackets using the Chopsic theme.",
-    "homepage": "https://github.com/DarhkPianist/ChopsicBrackets",
+    "name": "sashadarhk.vlad",
+    "title": "Vlad",
+    "description": "A theme for Brackets.",
+    "homepage": "https://github.com/DarhkPianist/Vlad",
     "version": "1.0.0",
-    "author": "Sasha Darhk <sashadarhk@gmail.com> (https://github.com/DarhkPianist/ChopsicBrackets)",
+    "author": "Sasha Darhk <sashadarhk@gmail.com> (https://github.com/DarhkPianist/Vlad)",
     "license": "MIT",
     "theme": {
         "file": "theme.less",
