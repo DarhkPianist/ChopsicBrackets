@@ -1,8 +1,11 @@
 @background: #1d1f21;
 @foreground: #8a0303;
-@hotpink: #CC0066;
+@vampire-dust: #ff79c6;
 @pinkpurple: #CC00FF;
-@neongreen: #99FF00;
+@neongreen: #3517d4;
+@test: #99bac2;
+@vampire-teeth: #FDF8FC; 
+@red-ink: #E31B34;
 
 /* Code Styling */
 
@@ -29,16 +32,21 @@
     }
 }
 
-.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: @hotpink;}
+.cm-atom, .cm-string, .cm-string-2, .cm-hr {color: @vampire-dust;}
 .cm-number, .cm-attribute, .cm-plus {color: @pinkpurple;}
 .cm-def, .cm-property {color: @neongreen;}
-.cm-variable, .cm-variable-2, .cm-variable-3, .cm-operator, .cm-meta, .cm-bracket {color: @foreground;}
+.cm-variable {color: @test;}
+.cm-variable-2 {color: @foreground;}
+.cm-variable-3 {color: @foreground;}
+.cm-operator {color: @foreground;}
+.cm-meta {color: @foreground;}
+.cm-bracket {color: @foreground;}
 .cm-comment {color: #767676;}
-.cm-error, .cm-minus {color: #dc322f;}
+.cm-error, .cm-minus {color: #fdff9c;}
 .cm-header {color: #d85896;}
 .cm-link {color: @pinkpurple; text-decoration: none;}
 .cm-rangeinfo {color: #656de8;}
-.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: #656de8;}
+.cm-keyword, .cm-qualifier, .cm-builtin, .cm-tag, .cm-quote {color: @red-ink;}
 
 /* Extra CSS */
 
@@ -60,37 +68,26 @@
 }
 
 .CodeMirror-linenumber {
-    color: #767676;
+    color: @pinkpurple;
 }
 
 .CodeMirror .CodeMirror-selected {
-    background: #333f48;
+    background: @test;
 }
 .CodeMirror-focused .CodeMirror-selected {
-    background: #0099FF;
+    background: #300052;
 }
 
 .CodeMirror-matchingbracket, .CodeMirror-matchingtag {
-    /* Ensure visibility against gray inline editor background */
     background-color: #2e5c00;
-    color: @foreground !important;
+    color: @test !important; 
 }
 
 .CodeMirror-overwrite .CodeMirror-cursor {
     border-left: none !important;
     border-bottom: 1px solid #fff;
-}+
+}
 
-/*
-    CodeMirror's use of descendant selectors for certain styling causes problems when editors are
-    nested because, for items in the inner editor, the left-hand clause in the selector will now
-    match either the actual containing CodeMirror instance *OR* the outer "host" CodeMirror instance.
-    TODO (issue #324): We'll still have problems if editors can be nested more than one level deep,
-    or if any other descendant-selector-driven CM styles can differ between inner & outer editors
-    (potential problem areas include line wrap and coloring theme: basically, anything in codemirror.css
-    that uses a descandant selector where the CSS class name to the left of the space is something
-    other than a vanilla .CodeMirror)
- */
 .CodeMirror {
     .CodeMirror {
         background: transparent;
